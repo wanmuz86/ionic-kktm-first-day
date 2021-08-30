@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Hello World
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -9,12 +9,35 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+      <ion-title size="large">Hello World</ion-title>
     </ion-toolbar>
   </ion-header>
 
   <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <h3>Hello World!</h3>
+    <p>Welcome to my first app!</p>
+    <p>My name is {{name}} , I am {{age}} years old.</p>
+    <ion-button color="success" (click)="sayHello()">Say Hello!</ion-button>
+    <hr>
+    <h3>My counter</h3>
+    <p>{{counter}}</p>
+    <p>{{message}}</p>
+    <ion-button color="primary" (click)="increment()">Increment</ion-button>
+    <ion-button color="secondary" (click)="decrement()">Decrement</ion-button>
+    <ion-button color="danger" (click)="reset()">Reset</ion-button>
+    <h3>Exercise</h3>
+    <ion-button color="primary" (click)="alertPressed()">Show Alert</ion-button>
+    <ion-button color="primary" (click)="actionPressed()">Show Action Sheet</ion-button>
+    <h3>Your info!</h3>
+    <ion-item> 
+      <ion-label position="floating">Name</ion-label> 
+      <ion-input [(ngModel)]="byeName"></ion-input> 
+    </ion-item>
+      <ion-item>
+      <ion-label position="floating">Age</ion-label> 
+      <ion-input type="number" [(ngModel)]="byeAge"></ion-input> 
+    </ion-item>
+    <ion-button color="primary" (click)="sayGoodbye()">Say Goodbye</ion-button>
+
   </div>
 </ion-content>
